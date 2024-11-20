@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Dashboard" class="action-bar" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <!-- Motivational Quote -->
+            <StackLayout class="card">
+                <Label text="{{ dailyQuote }}" textWrap="true" class="text-lg text-center text-gray-700" />
+                <Label text="{{ quoteAuthor }}" class="text-right text-gray-500 mt-2" />
+            </StackLayout>
+
+            <!-- Today's Tasks -->
+            <Label text="Today's Tasks" class="text-xl font-bold mt-4 mb-2" />
+            <ListView items="{{ todayTasks }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="card">
+                        <Label text="{{ title }}" class="text-lg" />
+                        <StackLayout orientation="horizontal">
+                            <Label text="{{ dueTime }}" class="text-gray-500" />
+                            <Label text="{{ priority }}" class="ml-2" 
+                                   class="{{ 'priority-' + priority.toLowerCase() }}" />
+                        </StackLayout>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+
+            <!-- Habits Progress -->
+            <Label text="Habits Progress" class="text-xl font-bold mt-4 mb-2" />
+            <GridLayout rows="auto" columns="*,*" class="card">
+                <StackLayout col="0" class="text-center">
+                    <Label text="{{ completedHabits }}" class="text-2xl text-blue-600" />
+                    <Label text="Completed" class="text-gray-500" />
+                </StackLayout>
+                <StackLayout col="1" class="text-center">
+                    <Label text="{{ streakDays }}" class="text-2xl text-green-600" />
+                    <Label text="Day Streak" class="text-gray-500" />
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

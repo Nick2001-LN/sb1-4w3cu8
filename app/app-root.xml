@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabView androidTabsPosition="bottom">
+    <TabViewItem title="Dashboard" iconSource="font://&#xf015;" class="fas">
+        <Frame defaultPage="views/dashboard/dashboard-page" />
+    </TabViewItem>
+    <TabViewItem title="Tasks" iconSource="font://&#xf0ae;" class="fas">
+        <Frame defaultPage="views/tasks/tasks-page" />
+    </TabViewItem>
+    <TabViewItem title="Habits" iconSource="font://&#xf0c8;" class="fas">
+        <Frame defaultPage="views/habits/habits-page" />
+    </TabViewItem>
+    <TabViewItem title="Insights" iconSource="font://&#xf080;" class="fas">
+        <Frame defaultPage="views/insights/insights-page" />
+    </TabViewItem>
+</TabView>
